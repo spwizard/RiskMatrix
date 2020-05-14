@@ -1,0 +1,27 @@
+<div class="yAxisContainer">
+  <div class="yAxis">
+    <span>Major</span>
+    <span>Minor</span>
+  </div>
+  <div class="xAxisContainer">
+    <div class="xAxis">
+      <span>Low</span>
+      <span>High</span>
+    </div>
+    <div *ngFor="let row of entities; let rowIndex = index" class="row">
+      <div
+        *ngFor="let col of row.series; let colIndex = index"
+        class="col"
+        (click)="handleColClick(rowIndex, colIndex)"
+        [ngStyle]="{'background-color': getColorAccordingIndex(rowIndex + colIndex)}"
+      >
+        {{col.value}}
+      </div>
+    </div>
+    <div class="xAxis">
+      <span>Low</span>
+      <span>High</span>
+    </div>
+  </div>
+  <div class="yAxis"><span>Major</span> <span>Minor</span></div>
+</div>

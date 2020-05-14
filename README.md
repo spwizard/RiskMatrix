@@ -1,2 +1,0 @@
-# RiskMatrix
-Created with CodeSandbox
